@@ -9,7 +9,7 @@ parse_PyList <- function(x) {
 #' 
 #' @export
 stanhl_styles <- function() {
-  cmd <- paste0("python -c 'from pygments.styles import get_all_styles;",
+  cmd <- paste0("~/miniconda3/bin/python -c 'from pygments.styles import get_all_styles;",
                 "print list(get_all_styles())'")
   # greedy is ok here; formatted as Python list
   parse_PyList(pipe_in(cmd))
