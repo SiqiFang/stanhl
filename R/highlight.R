@@ -1,5 +1,5 @@
 has_pygments <- function() {
-  exit_status <- system("pygmentize -V", ignore.stdout=TRUE, ignore.stderr=TRUE)
+  exit_status <- system("~/miniconda3/bin/pygmentize -V", ignore.stdout=TRUE, ignore.stderr=TRUE)
   if (exit_status != 0)
     stop("Pygments 'pygmentize' not found - have you installed Pygments?")
   invisible(exit_status == 0)
